@@ -30,6 +30,7 @@ box-flex:  0;
 
 
 .main {
+  background: aliceblue;
  -ms-flex: 1;
  -webkit-box-flex: 1;
  -moz-box-flex: 1;
@@ -78,25 +79,6 @@ box-flex:  0;
   position: relative;
   width: 100%;
   height: auto;
-  filter: grayscale(100%);
-  z-index: -1;
-}
-
-.home-intro {
-  position: absolute;
-  top: 78%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
-
-.home-intro-greeting {
-  color: WHITE;
-  font-size: 88px;
-}
-
-.home-intro-name {
-  color: #fed900;
-  font-size: 32px;
 }
 
 .my-pic {
@@ -105,4 +87,10 @@ box-flex:  0;
   height: 190px;
   width: 180px;
   border-radius: 50%;
+}
+
+.intro {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 20%;
 }
