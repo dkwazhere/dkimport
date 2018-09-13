@@ -1,0 +1,125 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    box-sizing: border-box;
+}
+
+.column {
+    height: 100%;  /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;  /*places the left and right headers above the bottom content*/
+}
+
+#left {
+    flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.bottom {
+    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;  /*adds scroll to this container*/
+}
+
+.side-nav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1c262b;
+  overflow-x: hidden;
+}
+
+.navbar-a {
+  padding: 12%;
+  text-decoration: none;
+  font-size: 18px;
+  color: #E7DFDD;
+  display: block;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+.side-nav a:hover {
+  color: #334454;
+}
+
+.navbar-pic {
+  padding: 20%;
+  color: WHITE;
+  text-decoration: none;
+  font-size: 18px;
+  color: #E7DFDD;
+  display: block;
+  text-align: center;
+}
+
+.navbar-name {
+  color: WHITE;
+  text-decoration: none;
+  font-size: 18px;
+  color: #E7DFDD;
+  display: block;
+  text-align: center;
+  background-color: #28a067;
+  margin-top: 15px;
+  padding: 5%;
+}
+
+.main-home {
+  max-width: 100%;
+  height: auto;
+  position: fixed;
+  margin-left: 2%;
+}
+
+.home-img {
+  width: 1300px;
+  height: 650px;
+  z-index: -1;
+  /* making image gray */
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
+  filter: url(resources.svg#desaturate); /* Gecko */
+  filter: gray; /* IE */
+  -webkit-filter: grayscale(1); /* Old WebKit */
+}
+
+.home-intro {
+  position: absolute;
+  top: 78%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.home-intro-greeting {
+  color: WHITE;
+  font-size: 88px;
+}
+
+.home-intro-name {
+  color: #fed900;
+  font-size: 32px;
+}
+
+.my-pic {
+  margin-left: 15px;
+  padding-bottom: 2%;
+  height: 190px;
+  width: 180px;
+  border-radius: 50%;
+}
