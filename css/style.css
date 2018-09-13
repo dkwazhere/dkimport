@@ -1,33 +1,40 @@
-html {
-    height: 100%;
-}
-
+html,
 body {
-    height: 100%;
-    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
-    margin: 0px;  /*removes default style*/
-    display: flex;  /*enables flex content for its children*/
-    box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.column {
-    height: 100%;  /*allows both columns to span the full height of the browser window*/
-    display: flex;
-    flex-direction: column;  /*places the left and right headers above the bottom content*/
+.container {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
 }
 
-#left {
-    flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+.nav {
+-ms-flex: 0 100px;
+-webkit-box-flex:  0;
+-moz-box-flex:  0;
+-ms-box-flex:  0;
+box-flex:  0;
 }
 
-ul {
-    display: inline-flex;
-    list-style: none;
-}
 
-.bottom {
-    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
-    overflow-y: auto;  /*adds scroll to this container*/
+.main {
+ -ms-flex: 1;
+ -webkit-box-flex: 1;
+ -moz-box-flex: 1;
+ -ms-box-flex: 1;
+ box-flex: 1;
 }
 
 .side-nav {
@@ -55,16 +62,6 @@ ul {
   color: #334454;
 }
 
-.navbar-pic {
-  padding: 20%;
-  color: WHITE;
-  text-decoration: none;
-  font-size: 18px;
-  color: #E7DFDD;
-  display: block;
-  text-align: center;
-}
-
 .navbar-name {
   color: WHITE;
   text-decoration: none;
@@ -77,26 +74,12 @@ ul {
   padding: 5%;
 }
 
-.main-home {
-  max-width: 100%;
-  height: auto;
-  position: fixed;
-  margin-left: 2%;
-}
-
 .home-img {
-  width: 1300px;
-  height: 650px;
-  z-index: -1;
-  /* making image gray */
+  position: relative;
+  width: 100%;
+  height: auto;
   filter: grayscale(100%);
-  -webkit-filter: grayscale(100%); /* New WebKit */
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
-  filter: url(resources.svg#desaturate); /* Gecko */
-  filter: gray; /* IE */
-  -webkit-filter: grayscale(1); /* Old WebKit */
+  z-index: -1;
 }
 
 .home-intro {
